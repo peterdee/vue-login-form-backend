@@ -1,0 +1,45 @@
+{
+  "name": "vue-login-form-backend",
+  "version": "1.0.0",
+  "author": "Peter Dyumin",
+  "description": "Backend for the vue-login-form-frontend",
+  "private": true,
+  "license": "ISC",
+  "main": "server.js",
+  "scripts": {
+    "lint": "eslint",
+    "lint-staged": "lint-staged",
+    "dev": "nodemon ./server.js",
+    "stage": "NODE_ENV='production' && node ./server.js"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint"
+  },
+  "pre-commit": "lint-staged",
+  "engines": {
+    "node": "13.1.0",
+    "npm": "6.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterdee/vue-login-form-backend"
+  },
+  "keywords": [
+    "Koa"
+  ],
+  "dependencies": {
+    "@koa/cors": "^2.2.3",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^2.0.1",
+    "pre-commit": "^1.2.2"
+  }
+}
