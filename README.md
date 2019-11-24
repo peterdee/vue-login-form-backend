@@ -8,7 +8,7 @@ Stack: [`Koa`](https://koajs.com)
 
 DEV: http://localhost:9000
 
-STAGE: https://vue-login-form-backend.herokuapp.com/
+STAGE: https://vue-login-form-backend.herokuapp.com
 
 Hardcoded user credentials:
 ```text
@@ -18,8 +18,9 @@ password: qwerty123
 
 ### Routes
 
-- `/api/login` - `POST` - login request
+- `/` - `GET` - ping the server
 - `/api/dashboard` - `GET` - get user email and name for the dashboard
+- `/api/login` - `POST` - login request
 - `/api/posts` - `GET` - get all of the posts
 - `/api/posts?id=<POST_ID>` - `GET` - get a single post
 
