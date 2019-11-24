@@ -10,7 +10,7 @@ const posts = require('./posts');
 const app = new Koa();
 const user = {
   email: 'user@test.com',
-  name: 'Jack Sparrow',
+  name: 'Test User',
   password: 'qwerty123',
 };
 
@@ -28,6 +28,17 @@ dashboardRouter.get('/api/dashboard', async (ctx) => {
       ...data,
       posts,
     },
+    info: 'OK',
+    status: ctx.status,
+  };
+  return ctx.body;
+});
+
+// handle index request (basically ping the server)
+const indexRouter = new Router();
+indexRouter.get('/', (ctx) => {
+  ctx.status = 200;
+  ctx.body = {
     info: 'OK',
     status: ctx.status,
   };
@@ -98,6 +109,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.use(dashboardRouter.routes());
+app.use(indexRouter.routes());
 app.use(loginRouter.routes());
 app.use(postsRouter.routes());
 

@@ -8,7 +8,7 @@ Stack: [`Koa`](https://koajs.com)
 
 DEV: http://localhost:9000
 
-STAGE: https://vue-login-form-backend.herokuapp.com/
+STAGE: https://vue-login-form-backend.herokuapp.com
 
 Hardcoded user credentials:
 ```text
