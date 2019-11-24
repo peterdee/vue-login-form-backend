@@ -1,7 +1,10 @@
 {
   "name": "vue-login-form-backend",
   "version": "1.0.0",
-  "author": "Peter Dyumin",
+  "author": {
+    "name": "Peter Dyumin",
+    "url": "https://github.com/peterdee"
+  },
   "description": "Backend for the vue-login-form-frontend",
   "private": true,
   "license": "ISC",

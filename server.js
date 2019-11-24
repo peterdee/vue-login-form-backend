@@ -102,6 +102,6 @@ app.use(loginRouter.routes());
 app.use(postsRouter.routes());
 
 // launch the server
-const PORT = Number(process.env.port) || 9000;
+const PORT = Number(process.env.PORT) || 8080;
 /* eslint-disable */
 app.listen(PORT, () => console.log(`-- Server is running on port ${PORT}`));
