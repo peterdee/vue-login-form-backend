@@ -6,9 +6,9 @@ Frontend project: [`vue-login-form-frontend`](https://github.com/peterdee/vue-lo
 
 Stack: [`Koa`](https://koajs.com)
 
-DEV: http://localhost:9000
+**DEV**: http://localhost:8080
 
-STAGE: https://vue-login-form-backend.herokuapp.com
+**STAGE**: https://vue-login-form-backend.herokuapp.com
 
 Hardcoded user credentials:
 ```text
