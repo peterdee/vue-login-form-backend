@@ -1,10 +1,14 @@
 ## Backend for the vue-login-form-frontend
 
+[![Known Vulnerabilities](https://snyk.io/test/github/peterdee/vue-login-form-backend/badge.svg?targetFile=package.json)](https://snyk.io/test/github/peterdee/vue-login-form-backend?targetFile=package.json)
+
 Frontend project: [`vue-login-form-frontend`](https://github.com/peterdee/vue-login-form-frontend)
 
 Stack: [`Koa`](https://koajs.com)
 
 DEV: http://localhost:9000
+
+STAGE: https://vue-login-form-backend.herokuapp.com/
 
 Hardcoded user credentials:
 ```text
@@ -34,4 +38,8 @@ Development:
 
 Stage / production:
 
-- `npm run stage`
+- `npm start`
+
+### Heroku
+
+The `stage` branch is deployed to [Heroku](https://herokuapp.com/) automatically

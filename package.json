@@ -10,7 +10,7 @@
     "lint": "eslint",
     "lint-staged": "lint-staged",
     "dev": "nodemon ./server.js",
-    "stage": "NODE_ENV='production' && node ./server.js"
+    "start": "NODE_ENV='production' && node ./server.js"
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint"
