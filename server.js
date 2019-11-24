@@ -3,7 +3,6 @@ const cors = require('@koa/cors');
 const Koa = require('koa');
 const logger = require('koa-logger');
 const Router = require('koa-router');
-const serve = require('koa-static');
 
 const posts = require('./posts');
 
@@ -102,11 +101,6 @@ postsRouter.get('/api/posts', async (ctx) => {
 app.use(bodyParser());
 app.use(cors());
 app.use(logger());
-
-// serve dist for production build
-if (process.env.NODE_ENV === 'production') {
-  app.use(serve(`${__dirname}/dist`));
-}
 
 app.use(dashboardRouter.routes());
 app.use(indexRouter.routes());
