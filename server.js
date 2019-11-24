@@ -1,5 +1,7 @@
 const bodyParser = require('koa-bodyparser');
+const compress = require('koa-compress');
 const cors = require('@koa/cors');
+const { Z_SYNC_FLUSH: flush } = require('zlib');
 const Koa = require('koa');
 const logger = require('koa-logger');
 const Router = require('koa-router');
@@ -99,6 +101,7 @@ postsRouter.get('/api/posts', async (ctx) => {
 });
 
 app.use(bodyParser());
+app.use(compress({ filter: contentType => /text/i.test(contentType), threshold: 2048, flush }));
 app.use(cors());
 app.use(logger());
 
