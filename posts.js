@@ -145,4 +145,70 @@ The realization that the feds have been trying to track Bitcoiners for years is 
     `,
     title: 'The NSA Tried Tracking Bitcoin Users In 2013',
   },
+  {
+    created: '2019-09-01',
+    id: 4,
+    text: `
+When is a quote from a historical figure not to be trusted? When it is tweeted by a Trump.
+
+In truth, all historical quotes tweeted out by politicians should be treated with the caution of the most stringent factchecker – and regularly are, particularly when the words in question are supposedly by Winston Churchill.
+
+Nonetheless, this week Ivanka Trump fell into a familiar trap, provoking widespread glee.
+
+On Thursday evening, after a final (for now) dramatic day of public hearings in the impeachment inquiry against her father, the first daughter wrote: “‘A decline of public morals in the United States will probably be marked by the abuse of the power of impeachment as a means of crushing political adversaries or ejecting them from office.’
+
+Democrats say Donald Trump abused the powers of his office when he pressured Ukraine to investigate a political rival and a baseless conspiracy theory about interference in the 2016 election.
+
+Republicans say the charges are a sham and the hearings a political circus designed to bring down a president without recourse to the ballot box.
+
+So Ivanka’s tweet was on message. But, alas, it wasn’t Tocqueville.
+
+As historians with Twitter accounts made clear, it was in fact a paraphrase drawn from the Frenchman’s seminal work Democracy in America, which was published between 1835 and 1840 and is, according to the Guardian’s Nicholas Lezard, “still relevant [as] everyone can find something in it that is recognisably correct”.
+
+The incorrect lines Ivanka found were from the 1889 book American Constitutional Law by John Innes Clark Hare.
+
+It was also swiftly determined that Trump had most likely not found the 130-year-old lines on Google Books, or even while paging through a dusty tome ordered from the Library of Congress in order to mine the history of her father’s predicament for aperçus fit to toss over canapés at some Kalorama or Georgetown salon.
+
+Instead, Innes Clark Hare’s words were published on the opinion pages of the Wall Street Journal on 25 October, under the headline “This impeachment subverts the constitution”.
+
+Trump was at least in good company: as a WSJ correction now makes clear, the two constitutional lawyers who wrote the piece in question also misattributed the quote, thanks in part to its appearance under Tocqueville’s name in Deschler’s Precedents of the United States House of Representatives, a catchily titled leviathan by House parliamentarian Lewis Deschler published in 1977.
+
+As of Saturday morning, the tweet remained on Ivanka’s Twitter page. If she fancied any further reading, Twitter was of course happy to supply it.
+
+Joshua D Rothman, a history professor at the University of Alabama, was among those who pointed out that Innes Clark Hare deployed the paraphrase of Tocqueville in writing about the impeachment of Andrew Johnson. That process, in 1868, saw the venal and unpopular 17th president avoid removal from office by one vote in a Senate trial.
+
+“The actual quote in context claims Andrew Johnson was wronged,” Rothman wrote. It was now being used, he added, by a woman he called “a beneficiary of nepotism in defense of a man who settled what is only his most recent fraud case less than two weeks ago”.    
+    `,
+    title: 'Ivanka Trump defends father with fake impeachment quote',
+  },
+  {
+    created: '2019-09-01',
+    id: 5,
+    text: `
+One, two three, four
+
+Down in a hole there are so many ways
+To find yourself some light
+It' always the miracles keep waiting all you like
+Ain't got no time to waste I know the end is near
+And if I run away I'll always end up here
+
+[Hook]
+Walking away from the things I adore
+Telling the truth for once I'm sure
+It's always a sign when you feel yourself bleed
+I'm walking away from all I need
+
+I can't escape the tragedy that always brings me down
+If I could eliminate those things that make me frown
+Take all the baggage that follows me around
+And just disintegrate burn it to the ground
+[Hook]
+
+I'm walking away!
+
+Walking away!
+    `,
+    title: 'Limp Bizkit - Walking Away (lyrics)',
+  },
 ];

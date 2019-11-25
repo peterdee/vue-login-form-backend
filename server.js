@@ -20,7 +20,7 @@ const dashboardRouter = new Router();
 dashboardRouter.get('/api/dashboard', async (ctx) => {
   // delay response
   const delayedData = new Promise(
-    resolve => setTimeout(() => resolve({ email: user.email, name: user.name }), 3000),
+    (resolve) => setTimeout(() => resolve({ email: user.email, name: user.name }), 3000),
   );
   const data = await delayedData;
   ctx.status = 200;
@@ -58,9 +58,9 @@ loginRouter.post('/api/login', async (ctx) => {
     };
     return ctx.body;
   }
-  
+
   // delay response
-  const delay = new Promise(resolve => setTimeout(() => resolve(), 2000));
+  const delay = new Promise((resolve) => setTimeout(() => resolve(), 2000));
   await delay;
 
   if (email !== user.email || password !== user.password) {
@@ -86,10 +86,10 @@ postsRouter.get('/api/posts', async (ctx) => {
   const { id = '' } = ctx.request.query;
 
   // delay response
-  const delay = new Promise(resolve => setTimeout(() => resolve(), 2000));
+  const delay = new Promise((resolve) => setTimeout(() => resolve(), 2000));
   await delay;
 
-  const data = id ? posts.filter(post => post.id === Number(id))[0] : posts;
+  const data = id ? posts.filter((post) => post.id === Number(id))[0] : posts;
 
   ctx.status = 200;
   ctx.body = {
@@ -101,7 +101,7 @@ postsRouter.get('/api/posts', async (ctx) => {
 });
 
 app.use(bodyParser());
-app.use(compress({ filter: contentType => /text/i.test(contentType), threshold: 2048, flush }));
+app.use(compress({ filter: (contentType) => /text/i.test(contentType), threshold: 2048, flush }));
 app.use(cors());
 app.use(logger());
 
@@ -112,5 +112,4 @@ app.use(postsRouter.routes());
 
 // launch the server
 const PORT = Number(process.env.PORT) || 8080;
-/* eslint-disable */
 app.listen(PORT, () => console.log(`-- Server is running on port ${PORT}`));

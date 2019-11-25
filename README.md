@@ -28,7 +28,7 @@ password: qwerty123
 
 - `git clone https://github.com/peterdee/vue-login-form-backend`
 - `cd ./vue-login-form-backend`
-- `nvm use 13.1` (please see the actual Node version in [package.json](package.json) file)
+- `nvm use 13.2` (please see the actual Node version in [package.json](package.json) file)
 - `npm i` (use `npm i --prod` for `stage` / `production`)
 
 ### Launch
