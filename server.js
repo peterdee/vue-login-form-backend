@@ -1,6 +1,7 @@
 const bodyParser = require('koa-bodyparser');
 const compress = require('koa-compress');
 const cors = require('@koa/cors');
+const favicon = require('koa-favicon');
 const { Z_SYNC_FLUSH: flush } = require('zlib');
 const Koa = require('koa');
 const logger = require('koa-logger');
@@ -90,13 +91,11 @@ postsRouter.get('/api/posts', async (ctx) => {
   const delay = new Promise((resolve) => setTimeout(() => resolve(), delayTime));
   await delay;
 
-  const data = id
-    ? posts.filter((post) => post.id === Number(id))[0]
-    : posts.filter(({ id: postId, title }) => ({ id: postId, title }));
-
   ctx.status = 200;
   ctx.body = {
-    data,
+    data: id
+      ? posts.filter((post) => post.id === Number(id))[0]
+      : posts.map(({ id: postId, title }) => ({ id: postId, title })),
     info: 'OK',
     status: ctx.status,
   };
@@ -106,6 +105,7 @@ postsRouter.get('/api/posts', async (ctx) => {
 app.use(bodyParser());
 app.use(compress({ filter: (contentType) => /text/i.test(contentType), threshold: 2048, flush }));
 app.use(cors());
+app.use(favicon(`${__dirname}/assets/favicon.ico`));
 app.use(logger());
 
 app.use(dashboardRouter.routes());
