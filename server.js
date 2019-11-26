@@ -9,6 +9,7 @@ const Router = require('koa-router');
 const posts = require('./posts');
 
 const app = new Koa();
+const delayTime = 1000;
 const user = {
   email: 'user@test.com',
   name: 'Test User',
@@ -20,7 +21,7 @@ const dashboardRouter = new Router();
 dashboardRouter.get('/api/dashboard', async (ctx) => {
   // delay response
   const delayedData = new Promise(
-    (resolve) => setTimeout(() => resolve({ email: user.email, name: user.name }), 3000),
+    (resolve) => setTimeout(() => resolve({ email: user.email, name: user.name }), delayTime),
   );
   const data = await delayedData;
   ctx.status = 200;
@@ -60,7 +61,7 @@ loginRouter.post('/api/login', async (ctx) => {
   }
 
   // delay response
-  const delay = new Promise((resolve) => setTimeout(() => resolve(), 2000));
+  const delay = new Promise((resolve) => setTimeout(() => resolve(), delayTime));
   await delay;
 
   if (email !== user.email || password !== user.password) {
@@ -86,10 +87,12 @@ postsRouter.get('/api/posts', async (ctx) => {
   const { id = '' } = ctx.request.query;
 
   // delay response
-  const delay = new Promise((resolve) => setTimeout(() => resolve(), 2000));
+  const delay = new Promise((resolve) => setTimeout(() => resolve(), delayTime));
   await delay;
 
-  const data = id ? posts.filter((post) => post.id === Number(id))[0] : posts;
+  const data = id
+    ? posts.filter((post) => post.id === Number(id))[0]
+    : posts.filter(({ id: postId, title }) => ({ id: postId, title }));
 
   ctx.status = 200;
   ctx.body = {
